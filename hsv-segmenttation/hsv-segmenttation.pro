@@ -7,7 +7,9 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    houghLine.cpp \
+    auto_canny.cpp
 
 CONFIG+=c++11
 QMAKE_CFLAGS += -std=c++11
@@ -38,4 +40,7 @@ LIBS += /usr/local/lib/libopencv_highgui.so\
         /usr/local/lib/libopencv_videoio.so\
         /usr/local/lib/libopencv_videostab.so\
         /usr/local/lib/libARToolKitPlus.so\
-        /usr/lib/aarch64-linux-gnu/libglfw.so\
+
+HEADERS += \
+    houghLine.h \
+    auto_canny.h
